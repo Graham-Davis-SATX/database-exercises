@@ -8,14 +8,15 @@ DROP TABLE IF EXISTS albums;
 
 CREATE TABLE albums(
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  artist_first_name INT(20) NOT NULL,
-  artist_last_name INT(20) NOT NULL,
-  album_name INT(50) NOT NULL,
-  release_date INT(4) NOT NUll,
-  total_albums_sold INT(6) NOT NULL,
+  artist_name VARCHAR(255) NOT NULL,
+  album_name VARCHAR(255) NOT NULL,
+  release_date INT(4) UNSIGNED NOT NUll,
+  total_albums_sold FLOAT,
+  genre VARCHAR(255),
   PRIMARY KEY(id)
 );
 
-SHOW CREATE TABLE albums\G
+-- SHOW CREATE TABLE albums\G
+DESCRIBE albums;
 
 
