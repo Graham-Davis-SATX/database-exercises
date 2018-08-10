@@ -18,7 +18,4 @@ CREATE TABLE albums(
 
 SHOW CREATE TABLE albums\G
 
--- mysql.server start
--- mysql.server status
--- mysql -u *USERNAME* -p
--- mysql -u codeup_test_user -p -t < albums_migration.sql
+
