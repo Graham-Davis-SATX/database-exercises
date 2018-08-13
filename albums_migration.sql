@@ -11,12 +11,10 @@ CREATE TABLE albums(
   artist_name VARCHAR(255) NOT NULL,
   album_name VARCHAR(255) NOT NULL,
   release_date INT(4) UNSIGNED NOT NUll,
-  total_albums_sold FLOAT,
   genre VARCHAR(255),
+  total_albums_sold FLOAT,
   PRIMARY KEY(id)
 );
 
 -- SHOW CREATE TABLE albums\G
 DESCRIBE albums;
-
-
