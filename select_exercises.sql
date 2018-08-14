@@ -42,12 +42,9 @@ WHERE sales < 20;
 
 SELECT 'All the albums in the rock genre. Is this all the rock albums in the table?' AS 'Exercise 6';
 
+
 SELECT name FROM albums
 WHERE genre = 'Rock';
-
-
-
-
 
 
 SELECT name FROM albums

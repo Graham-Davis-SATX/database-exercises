@@ -5,6 +5,7 @@ show tables;
 describe employees;
 
 # Find all employees with first names 'Irena', 'Vidya', or 'Maya' — 709 rows (Hint: Use IN).
+# Add a condition to the query to find everybody with those names who is also male — 441 rows.
 # Modify to order by first name. The first result should be Irena Reutenauer and the last result should be Vidya Simmen.
 # Update the query to order by first name and then last name. The first result should now be Irena Acton and the last should be Vidya Zweizig.
 # Change the order by clause so that you order by last name before first name. Your first result should still be Irena Acton but now the last result should be Maya Zyda.
@@ -55,10 +56,6 @@ or first_name = 'Maya';
 
 
 
-# Add a condition to the previous query to find everybody with those names who is also male — 441 rows.
-
-
-
 # Find all employees whose last name starts or ends with 'E' — 30,723 rows.
 select *
 from employees
@@ -71,6 +68,14 @@ select *
 from employees
 where last_name like 'e%'
 and last_name like '%e';
+
+# Update your queries for employees whose names start and end with 'E'. Use concat() to combine their first and last name together as a single column in your results.
+SELECT
+  CONCAT(first_name, ' ',last_name)
+FROM employees
+where last_name like 'e%'
+and last_name like '%e';
+
 
 
 # Find all employees hired in the 90s and born on Christmas — 362 rows.
